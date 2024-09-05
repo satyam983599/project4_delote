@@ -1,0 +1,71 @@
+/* ProgressTracker.module.css */
+.progressContainer {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stepContainer {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.stepButton {
+  background-color: #00ff8c;
+  color: white;
+  border: none;
+  height: 80px;
+  width: 100px;
+  padding: 5px 10px;
+  margin: 5px 0;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.stepButton.completed {
+  background-color: #0e71db;
+}
+
+.connector {
+  width: 2px;
+  height: 20px;
+  background-color: #28a745;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.connector.completedConnector {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .progressContainer {
+    right: 10px;
+  }
+
+  .stepButton {
+    height: 60px;
+    width: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .progressContainer {
+    right: 5px;
+  }
+
+  .stepButton {
+    height: 50px;
+    width: 70px;
+    font-size: 12px;
+  }
+}
